@@ -14,7 +14,7 @@ score = data["TOEFL Score"]
 admit=data["Chance of admit"]
 #Plotting initial scatter plot with score and chance of admit, and then splitting different parts of the data into two different colors.
 scatter1= pe.scatter(x=score,y=admit)
-scatter1.show()
+# scatter1.show()
 
 #Plotting second scatter plot with two different colors.
 colors=[]
@@ -24,7 +24,7 @@ for i in admit:
     else:
         colors.append("green")
 scatter2= pg.Figure(data=pg.Scatter(x=score,y=admit, mode="markers", marker=dict(color=colors)))
-scatter2.show()
+# scatter2.show()
 
 #Training and testing the AI
 scoresframe = data[["GRE Score","TOEFL Score"]]
@@ -61,3 +61,5 @@ if(resultuser[0]==1):
     print("From my predictions, you will get into the university.")
 else:
     print("Hmm...maybe try again next time?")
+
+#End of program
